@@ -1,0 +1,42 @@
+ <form #miFormulario="ngForm" (ngSubmit)="onSubmit()" >
+
+    <md-input-container>
+        <input md-input placeholder="Codigo"  [(ngModel)]="cliente.id" name="id" readonly>
+    </md-input-container>
+
+    <md-input-container>
+        <input md-input placeholder="Nombre"  [(ngModel)]="cliente.nombreCliente" name="nombreCliente" required >
+    </md-input-container>
+ 
+   <md-input-container>
+        <input md-input placeholder="País" [(ngModel)]="cliente.pais" name="pais" > 
+    </md-input-container>
+ 
+    <md-input-container>
+        <input md-input placeholder="Teléfono" [(ngModel)]="cliente.telefono" name="telefono" > 
+    </md-input-container>
+
+    <md-input-container>
+        <input md-input placeholder="Contacto" [(ngModel)]="cliente.contacto" name="contacto" > 
+    </md-input-container>
+
+     <md-input-container>
+        <input md-input placeholder="Email" type="email" [(ngModel)]="cliente.correoElectronico" name="correoElectronico" > 
+    </md-input-container>
+
+    <md-slide-toggle [(ngModel)]="cliente.activo" checked="cliente.activo" name="activo"> 
+        <span *ngIf="cliente.activo">Activo</span> 
+        <span *ngIf="!cliente.activo">Inactivo</span> 
+    </md-slide-toggle>
+
+     <md-input-container>
+        <input md-input placeholder="Tipo soporte" [(ngModel)]="cliente.tipoSoporte" name="tipoSoporte" > 
+    </md-input-container>
+
+    <md-slide-toggle [(ngModel)]="cliente.soporteDisponible" checked="cliente.soporteDisponible" name="soporteDisponible"> 
+        <span *ngIf="cliente.soporteDisponible">Soporte disponible</span> 
+        <span *ngIf="!cliente.soporteDisponible">Soporte no disponible</span> 
+    </md-slide-toggle>
+
+
+ </form>
